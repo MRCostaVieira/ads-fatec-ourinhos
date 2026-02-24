@@ -1,7 +1,6 @@
 // === INTRUÇÕES PARA COMPILAR E EXECULTAR O PROGRAMA ===
 
-// REPOSITÓRIO
-// 
+// REPOSITÓRIO: git@github.com:MRCostaVieira/ads-fatec-ourinhos.git
 
 // REQUISITOS
 
@@ -12,9 +11,6 @@
 //   - Fedora / RHEL / CentOS: sudo dnf groupinstall "Development Tools" -y
 //   - Arch linux: sudo pacman -S base-devel
 // - Mac OS: https://viniciuspaes.com/mac-osx/tutorial-instalar-compilador-c-mac-osx/
-
-// Git instalado para baixar o programa (pode ser baixado em zip no github)
-// - https://git-scm.com/
 
 // Compilar programa
 // 1. Abra seu terminal
