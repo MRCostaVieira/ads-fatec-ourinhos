@@ -1,7 +1,27 @@
+// === INTRUÇÕES PARA COMPILAR E EXECULTAR O PROGRAMA ===
+
+// Requisitos: compilador C instalado na sua máquina.
+// - Windows: https://www.alura.com.br/artigos/compilando-executando-programas-c-c-windows?srsltid=AfmBOorblquofsV8X8lsoDCpSQfRsEOemIJVagGtjMcSW2uS8fKCTY80
+// - Linux
+//   - Ubuntu / Debian / Mint: sudo apt update -y && sudo apt install build-essential -y
+//   - Fedora / RHEL / CentOS: sudo dnf groupinstall "Development Tools" -y
+//   - Arch linux: sudo pacman -S base-devel
+// - Mac OS: https://viniciuspaes.com/mac-osx/tutorial-instalar-compilador-c-mac-osx/
+
+// Compilar programa
+// 1. Abra seu terminal
+//   - No Visual Studio Code, podemos usar o atalho "ctrl + j"
+// 2. Certifique-se de estar no repositório (pasta) correta do programa.
+// 3. Comando para compilar o programa: 
+//   gcc matheus-rafael-da-costa-vieira-ed-aa01.c -o programa
+// 4. Execultar programa: ./programa
+
+
 #include <stdio.h>
 
-int execultar = 1; // Mantém o laço execultando
-int escolha; // Escolha do usuário
+int execLacoPrincipal = 1; // Mantém o laço execultando
+int escolhaUser; // Escolha (input) do usuário
+char buffer[100]; // Buffer usado na filtragem de input
 
 int contadorPiadas = 0;
 const char *piadas[] = {
@@ -31,39 +51,50 @@ void escolha_1(); // Piadas
 void escolha_2(); // Curiosidades
 void escolha_3(); // Defeito de um carro
     
-void escolhaInvalida();
-void encerrarLaco(int *execultar);
+void escolhaInvalida(); // Input incorreto
+void encerrarLaco(); // Encerrar programa
 
 int main () {
   
   printf("Bem vindo ao menu de opções 🥳\n");
 
-  while(execultar) {
-    printf("\nO que você deseja? 😁\n\n");
+  while(execLacoPrincipal) {
 
+    printf("\nO que você deseja? 😁\n\n");
+    // Opções do menu
     printf("[Digite 1] Ouvir uma piada\n");
     printf("[Digite 2] Saber uma curiosidade\n");
     printf("[Digite 3] Alguma coisa\n");
     printf("[Digite 0] Quero sair desse programa!\n");
     printf("Qual é a sua escolha? -> ");
 
-    if(scanf("%d", &escolha) == 1){
-      if(escolha == 1) {
-        escolha_1();
-      } else if(escolha == 2) {
-        escolha_2();
-      } else if(escolha == 3) {
-        escolha_3();
-      } else if(escolha == 0) {
-        encerrarLaco(&execultar);
+    // Filtragem de input
+    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+      if (sscanf(buffer, "%d", &escolhaUser) == 1) {
+
+        if(escolhaUser > 3 || escolhaUser < 0) { // Se não for um número
+          escolhaInvalida();
+        }
+
+        switch (escolhaUser) { // Número que o usuário escolheu
+        case 1:
+          escolha_1();
+          break;
+        case 2:
+          escolha_2();
+          break;
+        case 3:
+          escolha_3();
+          break;
+        case 0:
+          encerrarLaco();
+          break;
+        }
+
       } else {
         escolhaInvalida();
-        continue;
       }
-    }  else {
-      printf("Não é número");
     }
-
   }
 
   return 0;
@@ -103,7 +134,7 @@ void escolhaInvalida() {
   printf("\nOpção inválida meu chapa, tenta de novo 🔄️\n\n");
 }
       
-void encerrarLaco(int *execultar) {
+void encerrarLaco() {
   printf("\nVocê escolheu sair do programa 😭\n\n");
-  *execultar = 0;
+  execLacoPrincipal = 0;
 }
