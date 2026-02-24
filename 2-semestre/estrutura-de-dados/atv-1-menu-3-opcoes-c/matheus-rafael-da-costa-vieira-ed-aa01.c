@@ -1,12 +1,20 @@
 // === INTRUÇÕES PARA COMPILAR E EXECULTAR O PROGRAMA ===
 
-// Requisitos: compilador C instalado na sua máquina.
+// REPOSITÓRIO
+// 
+
+// REQUISITOS
+
+// Compilador C instalado na sua máquina.
 // - Windows: https://www.alura.com.br/artigos/compilando-executando-programas-c-c-windows?srsltid=AfmBOorblquofsV8X8lsoDCpSQfRsEOemIJVagGtjMcSW2uS8fKCTY80
 // - Linux
 //   - Ubuntu / Debian / Mint: sudo apt update -y && sudo apt install build-essential -y
 //   - Fedora / RHEL / CentOS: sudo dnf groupinstall "Development Tools" -y
 //   - Arch linux: sudo pacman -S base-devel
 // - Mac OS: https://viniciuspaes.com/mac-osx/tutorial-instalar-compilador-c-mac-osx/
+
+// Git instalado para baixar o programa (pode ser baixado em zip no github)
+// - https://git-scm.com/
 
 // Compilar programa
 // 1. Abra seu terminal
