@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int N;
+
+    printf("Digite a quantidade de numeros: ");
+    scanf("%d", &N);
+
+    float *numeros = (float*) malloc(N * sizeof(float));
+
+    if (numeros == NULL) {
+        printf("Erro ao alocar memoria.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < N; i++) {
+        printf("Digite o numero %d: ", i + 1);
+        scanf("%f", &numeros[i]);
+    }
+
+    printf("\nNumeros digitados:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%.2f\n", numeros[i]);
+    }
+
+    free(numeros);
+    return 0;
+}

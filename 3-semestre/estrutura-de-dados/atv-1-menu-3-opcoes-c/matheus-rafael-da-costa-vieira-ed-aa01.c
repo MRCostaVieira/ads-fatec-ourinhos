@@ -1,6 +1,6 @@
-// === INTRUÇÕES PARA COMPILAR E EXECULTAR O PROGRAMA ===
-
 // REPOSITÓRIO: git@github.com:MRCostaVieira/ads-fatec-ourinhos.git
+
+// === INTRUÇÕES PARA COMPILAR E EXECULTAR O PROGRAMA ===
 
 // REQUISITOS
 
