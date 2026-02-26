@@ -15,7 +15,7 @@
 // Compilar programa
 // 1. Abra seu terminal
 //   - No Visual Studio Code, podemos usar o atalho "ctrl + j"
-// 2. Certifique-se de estar no repositório (pasta) correta do programa.
+// 2. Certifique-se de estar no diretório correto do programa.
 // 3. Comando para compilar o programa: 
 //   gcc matheus-rafael-da-costa-vieira-ed-aa01.c -o programa
 // 4. Execultar programa: ./programa
