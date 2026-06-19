@@ -1,7 +1,11 @@
 # Códigos e projetos da minha jornada na Fatec Ourinhos
 
-## 1° e 2° Semestre
-Infelizmente perdi todos os dados e projetos desses semestres, por isso comecei esse repositório.
+## 1° Semestre
+**Algoritmos e Programação**
+- [Super Saúde](https://github.com/MRCostaVieira/super-saude/tree/main)
+
+## 2° Semestre
+Infelizmente perdi todos os dados e projetos deste semestre, por isso comecei esse repositório.
 
 ## 3° Semestre
 **Estrutura de Dados**
