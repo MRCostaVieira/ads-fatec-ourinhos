@@ -5,4 +5,3 @@
 [Sorteio de 15 números](./atv-3-sorteio-15-numeros-c/)
 [Estoque](./atv-4-estoque-c/)
 [Potência](./atv-5-potencia-c/)
-[Exercício de fila](./atv-7-lista-gerar-num/)
