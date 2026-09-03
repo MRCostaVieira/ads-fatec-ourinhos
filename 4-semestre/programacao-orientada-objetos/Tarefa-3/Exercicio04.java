@@ -8,7 +8,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicio03 {
+public class Exercicio04 {
 
     // Cada palavra secreta tem uma categoria/tema associado, usado como
     // primeira dica.
