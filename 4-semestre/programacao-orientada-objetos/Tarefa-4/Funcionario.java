@@ -66,4 +66,16 @@ public class Funcionario {
         this.departamento = novoDepartamento;
     }
 
+    @Override
+    public String toString() {
+        return String.format(
+                "Funcionário [ID: %d]%n" +
+                        "Nome: %s%n" +
+                        "CPF: %s%n" +
+                        "Cargo: %s%n" +
+                        "Departamento: %s%n" +
+                        "Salário Base: R$ %.2f",
+                this.id, this.nome, this.cpf, this.nomeCargo, this.departamento, this.salarioBase);
+    }
+
 }
