@@ -21,7 +21,7 @@ public class Jogador {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -29,7 +29,7 @@ public class Jogador {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public final void setIdade(int idade) {
         if (idade <= 0) {
             throw new IllegalArgumentException("A idade do jogador deve ser maior que zero.");
         }
@@ -40,7 +40,7 @@ public class Jogador {
         return posicao;
     }
 
-    public void setPosicao(String posicao) {
+    public final void setPosicao(String posicao) {
         this.posicao = posicao;
     }
 
@@ -48,7 +48,7 @@ public class Jogador {
         return salario;
     }
 
-    public void setSalario(float salario) {
+    public final void setSalario(float salario) {
         if (salario < 0) {
             throw new IllegalArgumentException("O salário do jogador não pode ser negativo.");
         }
@@ -59,7 +59,7 @@ public class Jogador {
         return contratado;
     }
 
-    public void setContratado(boolean contratado) {
+    public final void setContratado(boolean contratado) {
         this.contratado = contratado;
     }
 

@@ -11,7 +11,7 @@ public class Time {
     private String cidade;
     private int anoDeFundacao;
     private Tecnico tecnicoResponsavel;
-    private List<Jogador> listaDeJogadores;
+    private final List<Jogador> listaDeJogadores;
 
     public Time(String nome, String cidade, int anoDeFundacao, Tecnico tecnicoResponsavel) {
         setNome(nome);
@@ -21,11 +21,11 @@ public class Time {
         this.listaDeJogadores = new ArrayList<>();
     }
 
-    public String getNome() {
+    public final String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -33,7 +33,7 @@ public class Time {
         return cidade;
     }
 
-    public void setCidade(String cidade) {
+    public final void setCidade(String cidade) {
         this.cidade = cidade;
     }
 
@@ -41,7 +41,7 @@ public class Time {
         return anoDeFundacao;
     }
 
-    public void setAnoDeFundacao(int anoDeFundacao) {
+    public final void setAnoDeFundacao(int anoDeFundacao) {
         int anoAtual = Year.now().getValue();
         if (anoDeFundacao > anoAtual) {
             throw new IllegalArgumentException("O ano de fundação do time não pode ser um ano futuro.");
@@ -53,7 +53,7 @@ public class Time {
         return tecnicoResponsavel;
     }
 
-    public void setTecnicoResponsavel(Tecnico tecnicoResponsavel) {
+    public final void setTecnicoResponsavel(Tecnico tecnicoResponsavel) {
         this.tecnicoResponsavel = tecnicoResponsavel;
     }
 

@@ -19,7 +19,7 @@ public class Tecnico {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -27,7 +27,7 @@ public class Tecnico {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public final void setIdade(int idade) {
         if (idade <= 18) {
             throw new IllegalArgumentException("A idade do técnico deve ser maior que dezoito.");
         }
@@ -38,7 +38,7 @@ public class Tecnico {
         return salario;
     }
 
-    public void setSalario(float salario) {
+    public final void setSalario(float salario) {
         if (salario < 0) {
             throw new IllegalArgumentException("O salário do técnico não pode ser negativo.");
         }
@@ -49,7 +49,7 @@ public class Tecnico {
         return anosDeExperiencia;
     }
 
-    public void setAnosDeExperiencia(int anosDeExperiencia) {
+    public final void setAnosDeExperiencia(int anosDeExperiencia) {
         this.anosDeExperiencia = anosDeExperiencia;
     }
 
