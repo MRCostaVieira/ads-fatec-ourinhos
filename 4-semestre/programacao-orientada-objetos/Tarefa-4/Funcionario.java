@@ -2,10 +2,10 @@ public class Funcionario {
 
     static int ID = 1;
 
-    private int id;
-    private String nome;
-    private String cpf;
-    private String nomeCargo;
+    final private int id;
+    final private String nome;
+    final private String cpf;
+    final private String nomeCargo;
     private String departamento;
     private double salarioBase;
 
@@ -21,6 +21,7 @@ public class Funcionario {
     }
 
     public Funcionario(String nome, String cpf, String nomeCargo, String departamento, double salarioBase) {
+        this.id = ID;
         this.nome = nome;
         this.cpf = cpf;
         this.nomeCargo = nomeCargo;
